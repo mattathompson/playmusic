@@ -180,7 +180,7 @@ PlayMusic.prototype._oauth =  function (callback) {
 };
 PlayMusic.prototype.login =  function (opt, callback) {
     var that = this;
-    opt.androidId = opt.androidId || crypto.pseudoRandomBytes(8).toString("hex");
+    opt.androidId = opt.androidId || crypto.randomBytes(8).toString("hex");
     var data = {
         accountType: "HOSTED_OR_GOOGLE",
         Email: opt.email.trim(),
